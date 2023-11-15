@@ -7,6 +7,7 @@
 		<style>
 			.game {
 				display: flex;
+				flex-wrap: wrap;
 				gap: 1em;
 			}
 			.board {
@@ -17,7 +18,12 @@
 				width: 50px;
 				height: 50px;
 				border: 1px solid black;
+				border-top: none;
 				text-align: center;
+			}
+			/* First 4 cells get the top border though */
+			.cell:nth-child(-n+4) {
+				border-top: 1px solid black;
 			}
 			/* Set default light squares */
 			.cell {
@@ -38,6 +44,7 @@
 			.pieces,
 			.colors {
 				display: flex;
+				flex-wrap: wrap;
 				margin-bottom: 10px;
 			}
 			.piece,
@@ -91,6 +98,8 @@
 		</div>
 
 		<button id="solve">Solve!</button>
+
+		<br>
 
 		<textarea id="solution" readonly></textarea>
 
