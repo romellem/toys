@@ -1,3 +1,5 @@
+---
+---
 <ul>
 {% for page in site.pages %}
   {% if page.dir == '/' or page.dir contains '/assets/' %}
